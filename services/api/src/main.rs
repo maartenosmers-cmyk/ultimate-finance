@@ -33,6 +33,13 @@ async fn main() {
         providers,
     });
 
+    // Demo data on by default; SEED_DEMO=0 for a clean server.
+    let seeding = std::env::var("SEED_DEMO").map(|v| v != "0").unwrap_or(true);
+    if seeding {
+        api::seed::run(&state.store);
+        tracing::info!("demo login: {} / {}", api::seed::DEMO_EMAIL, api::seed::DEMO_PASSWORD);
+    }
+
     let app = build_router(state);
     let addr = SocketAddr::from(([0, 0, 0, 0], config.0));
     tracing::info!(env = %config.1, port = config.0, "starting ultimate-finance-api");

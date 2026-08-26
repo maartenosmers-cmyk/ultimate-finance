@@ -29,6 +29,19 @@ Aggregation runs server-side behind one provider abstraction (`src/aggregate/`):
 Synced accounts are *provider-authoritative*: balances come from the institution,
 transactions are deduped by external id, and webhooks are idempotent by body hash.
 
+## Demo account
+
+The server seeds a fully-populated demo household on startup (disable with `SEED_DEMO=0`):
+
+```
+email:    demo@ultimatefinance.app
+password: demo1234
+```
+
+Includes 5 accounts (checking, savings, credit card, brokerage, car loan) and
+~3 months of realistic transaction history — payroll, rent, subscriptions,
+groceries, card payments, auto-saves, dividends — plus fresh unreviewed items.
+
 ## Quickstart (backend)
 
 ```powershell
