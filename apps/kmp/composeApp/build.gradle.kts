@@ -36,6 +36,13 @@ kotlin {
                 implementation("androidx.core:core-ktx:1.15.0")
             }
         }
+
+        val desktopMain by getting {
+            dependencies {
+                // Pulls skiko-awt-runtime-windows-x64 (the Skia native engine).
+                implementation(compose.desktop.currentOs)
+            }
+        }
     }
 }
 
