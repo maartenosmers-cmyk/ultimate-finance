@@ -14,8 +14,8 @@ mortgage comparison, tax-lot-aware projections).
 | `crates/planning-engine/` | Pure-Rust financial math (amortization, Monte Carlo, goal forecasting). Dependency-light so it can later compile to WASM + UniFFI for on-device instant sims |
 | `services/api/` | Main API server (Rust / Axum): auth, ledger, **bank aggregation** |
 | `db/migrations/` | Postgres schema, forward-only migrations |
-| `apps/ios/` | **Native SwiftUI client** (iOS 17+, zero deps) — see `apps/ios/BUILD.md` |
-| `apps/android/` | Compose client — planned |
+| `apps/ios/` | Native SwiftUI client (iOS 17+) — build via `apps/ios/BUILD.md` on macOS |
+| `apps/kmp/` | **Compose Multiplatform client: one Kotlin UI → Android APK + Windows desktop** — see `apps/kmp/BUILD.md` |
 
 ## Bank connectivity
 

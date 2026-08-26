@@ -33,11 +33,11 @@
 - [ ] Reports builder (group-by, filter, trend, savable)
 
 ## M4 — Multiplayer & mobile shells
-- [x] iOS SwiftUI app skeleton: auth, home/net-worth, account detail,
-      manual transactions, mock bank connect, settings (see `apps/ios/BUILD.md`)
+- [x] iOS SwiftUI app skeleton (auth, home/net-worth, detail, manual txns, mock connect)
+- [x] Compose Multiplatform app: shared Kotlin UI → **Windows desktop + Android**
+      (auth, net-worth home, accounts, detail, manual txns, mock connect, settings)
 - [ ] Partner/advisor roles UI, per-account visibility scopes
-- [ ] Plaid Link SDK integration in Connections screen
-- [ ] Android Compose app: same scope
+- [ ] Plaid Link SDK integration (Connections screen, both platforms)
 - [ ] WebSocket push: sync progress, anomaly/budget alerts
 
 ## M5 — Planning surfaces (the differentiator ships to users)

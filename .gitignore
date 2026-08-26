@@ -2,3 +2,15 @@
 node_modules/
 .env
 *.local
+
+apps/kmp/local.properties
+apps/kmp/.gradle/
+apps/kmp/build/
+composeApp/build/
+*.apk
+
+**/.gradle/
+**/build/
+**/local.properties
+*.apk
+*.done
