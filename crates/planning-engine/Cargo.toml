@@ -1,0 +1,9 @@
+[package]
+name = "planning-engine"
+description = "Pure-Rust financial math: amortization, Monte Carlo retirement modeling, goal solvers"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+# Intentionally empty: std-only so this crate can compile to WASM and native
+# mobile bindings without friction. Determinism > convenience here.

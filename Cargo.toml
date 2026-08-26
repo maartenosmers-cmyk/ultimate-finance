@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["services/api", "crates/planning-engine"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
